@@ -27,7 +27,7 @@ jobs:
             - "25:02:44:e7:4d:0c:f5:ec:81:3a:e6:f8:59:6d:11:ca"
       - run: ls -la ~/repo
       - run: git config --global user.email "pascalschilp@gmail.com" && git config --global user.name "thepassle"
-      - run: sudo npm i -g yo generator-open-wc && sudo chown -R $USER /usr/local/lib/node_modules/ && sudo chmod g+rwx /root /root/.config /root/.config/configstore && sudo mkdir -p /home/circleci/repo/output && cd /home/circleci/repo/output && sudo yo open-wc:starter-app my-app --force && ls -la && pwd && sudo echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy2" && git push testing master
+      - run: sudo npm i -g yo generator-open-wc && sudo chown -R root /usr/local/lib/node_modules/ && sudo chmod g+rwx /root /root/.config /root/.config/configstore && sudo mkdir -p /home/circleci/repo/output && cd /home/circleci/repo/output && sudo yo open-wc:starter-app my-app --force && ls -la && pwd && sudo echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy2" && git push testing master
 
 
       # https://predictablynoisy.com/circleci-mirror
