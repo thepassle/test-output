@@ -22,8 +22,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: ls -la ~/repo
+      - run: mkdir asd
+      - run: cd asd
       - run: npm run rungen
-      - run: ls -la ~/repo
+      - run: ls -la
       # run tests
       # - run: npm run test:bs
 
