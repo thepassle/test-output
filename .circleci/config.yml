@@ -21,12 +21,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - add_ssh_keys:
+          fingerprints:
+            # The SSH key fingerprint
+            - "25:02:44:e7:4d:0c:f5:ec:81:3a:e6:f8:59:6d:11:ca"
       - run: ls -la ~/repo
       - run: sudo npm i -g yo generator-open-wc
-      - run: mkdir asd && cd asd && ls -la && npm run rungen && ls -la
-      # - run: cd asd
-      # - run: npm run rungen
-      - run: ls -la
+      - run: mkdir asd && cd asd && ls -la && npm run rungen && ls -la && git remote add origin git@github.com:thepassle/test-output.git && git push origin master
+
+
       # run tests
       # - run: npm run test:bs
 
