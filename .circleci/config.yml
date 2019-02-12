@@ -27,7 +27,7 @@ jobs:
             - "25:02:44:e7:4d:0c:f5:ec:81:3a:e6:f8:59:6d:11:ca"
       - run: ls -la ~/repo
       - run: sudo npm i -g yo generator-open-wc
-      - run: pwd && sudo mkdir -p /asd && cd /asd && ls -la && pwd && echo "asdfhjgasdfkjhagsdfkjhgasdkjfhgkasdhjfg" && npm run rungen && ls -la && pwd && echo "/node_modules" > .gitignore && ls -la && cd .. && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy" && git push testing master
+      - run: pwd && sudo mkdir -p /asd && mv /home/circleci/repo/package.json /asd && cd /asd && ls -la && pwd && echo "asdfhjgasdfkjhagsdfkjhgasdkjfhgkasdhjfg" && npm run rungen && ls -la && pwd && echo "/node_modules" > .gitignore && ls -la && cd .. && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy" && git push testing master
 
 
       # https://predictablynoisy.com/circleci-mirror
