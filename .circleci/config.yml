@@ -23,7 +23,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: ls -la ~/repo
       - run: sudo npm i -g yo generator-open-wc
-      # - run: mkdir asd && cd asd && ls -la && npm run rungen && ls -la
+      - run: mkdir asd && cd asd && ls -la && npm run rungen && ls -la
       # - run: cd asd
       # - run: npm run rungen
       - run: ls -la
