@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/thepassle/test-generator#readme",
   "dependencies": {
-    "generator-open-wc": "^0.7.0",
+    "generator-open-wc": "^0.7.1",
     "yo": "^2.0.5"
   }
 }
