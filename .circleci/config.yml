@@ -16,7 +16,7 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: npm install
+      # - run: npm install
       - save_cache:
           paths:
             - node_modules
@@ -27,7 +27,7 @@ jobs:
             - "<SSH KEY FINGERPRINT>"
       - run: ls -la ~/repo
       - run: git config --global user.email "pascalschilp@gmail.com" && git config --global user.name "thepassle"
-      - run: mkdir foo && cd foo && ../../node_modules/.bin/yo ../packages/generator-open-wc/generators/starter-app/ my-app --force && sudo echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy2" && git push --force testing master
+      - run: npm i && mkdir foo && cd foo && ../../node_modules/.bin/yo ../packages/generator-open-wc/generators/starter-app/ my-app --force && sudo echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy2" && git push --force testing master
 
       # https://predictablynoisy.com/circleci-mirror
       # https://discuss.circleci.com/t/in-deployment-trying-to-checkout-merge-in-different-repo-than-build-repo/12459
