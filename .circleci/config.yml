@@ -27,7 +27,7 @@ jobs:
             - "25:02:44:e7:4d:0c:f5:ec:81:3a:e6:f8:59:6d:11:ca"
       - run: ls -la ~/repo
       - run: git config --global user.email "pascalschilp@gmail.com" && git config --global user.name "thepassle"
-      - run: npm run rungen && ls -la && pwd && sudo echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy2" && git push testing master
+      - run: npm run rungen && ls -la && pwd && sudo echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy2" && git push --force testing master
 
 
       # https://predictablynoisy.com/circleci-mirror
