@@ -21,9 +21,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: cd ~/repo && yo open-wc:starter-app
+      - run: ls -la ~/repo
       - run: ls -la
+      - run: yo open-wc:starter-app
 
       # run tests
       # - run: npm run test:bs
