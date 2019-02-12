@@ -27,11 +27,19 @@ jobs:
             - "25:02:44:e7:4d:0c:f5:ec:81:3a:e6:f8:59:6d:11:ca"
       - run: ls -la ~/repo
       - run: sudo npm i -g yo generator-open-wc
-      - run: mkdir asd && cd asd && ls -la && npm run rungen && ls -la && echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && git add . && git commit -m "deploy" && git push testing master
-
-
-      # run tests
-      # - run: npm run test:bs
+      - run:
+        command: |
+          mkdir asd
+          cd asd
+          ls -la
+          npm run rungen
+          ls -la
+          echo "/node_modules" > .gitignore
+          ls -la
+          git remote add testing git@github.com:thepassle/test-output.git
+          git add .
+          git commit -m "deploy"
+          git push testing master
 
       # https://predictablynoisy.com/circleci-mirror
       # https://discuss.circleci.com/t/in-deployment-trying-to-checkout-merge-in-different-repo-than-build-repo/12459
