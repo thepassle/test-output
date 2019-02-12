@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/thepassle/test-generator/issues"
   },
-  "homepage": "https://github.com/thepassle/test-generator#readme"
+  "homepage": "https://github.com/thepassle/test-generator#readme",
+  "dependencies": {
+    "generator-open-wc": "^0.7.0",
+    "yo": "^2.0.5"
+  }
 }

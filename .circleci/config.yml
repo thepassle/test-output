@@ -22,7 +22,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: echo "hello world"
+      - run: yo open-wc:starter-app
+      - run: ls -la
 
       # run tests
       # - run: npm run test:bs
