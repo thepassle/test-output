@@ -22,7 +22,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yo open-wc:starter-app
+      - run: cd ~/repo && yo open-wc:starter-app
       - run: ls -la
 
       # run tests
