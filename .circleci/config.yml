@@ -22,8 +22,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: ls -la ~/repo
-      - run: ls -la
-      - run: yo open-wc:starter-app
-
+      - run: npm run rungen
+      - run: ls -la ~/repo
       # run tests
       # - run: npm run test:bs
