@@ -29,17 +29,18 @@ jobs:
       - run: sudo npm i -g yo generator-open-wc
       - run:
         command: |
-          mkdir asd
-          cd asd
-          ls -la
-          npm run rungen
-          ls -la
-          echo "/node_modules" > .gitignore
-          ls -la
-          git remote add testing git@github.com:thepassle/test-output.git
-          git add .
-          git commit -m "deploy"
-          git push testing master
+            mkdir asd
+            cd asd
+            ls -la
+            npm run rungen
+            ls -la
+            echo "/node_modules" > .gitignore
+            ls -la
+            git remote add testing git@github.com:thepassle/test-output.git
+            git add .
+            git commit -m "deploy"
+            git push testing master
+
 
       # https://predictablynoisy.com/circleci-mirror
       # https://discuss.circleci.com/t/in-deployment-trying-to-checkout-merge-in-different-repo-than-build-repo/12459
