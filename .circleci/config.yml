@@ -22,8 +22,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run lint
-      - run: npm run lint
+      - run: echo "hello world"
 
       # run tests
-      - run: npm run test:bs
+      # - run: npm run test:bs
