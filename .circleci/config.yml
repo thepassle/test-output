@@ -29,7 +29,7 @@ jobs:
       - run: git config --global user.email "pascalschilp@gmail.com" && git config --global user.name "thepassle"
       - run: npm i && ls -la && mkdir foo && cd foo && git pull && rm -rf * && git push --force && ../node_modules/.bin/yo ../node_modules/generator-open-wc/generators/starter-app/ my-app --force && sudo echo "/node_modules" > .gitignore && ls -la && git remote add testing git@github.com:thepassle/test-output.git && cd .. && git add ./foo && git commit -m "deploy2" && git push testing master
 
-it doesnt seem to put it in the folder
+# it doesnt seem to put it in the folder
 
       # https://predictablynoisy.com/circleci-mirror
       # https://discuss.circleci.com/t/in-deployment-trying-to-checkout-merge-in-different-repo-than-build-repo/12459
