@@ -28,7 +28,7 @@ jobs:
       - run: ls -la ~/repo
       - run: sudo npm i -g yo generator-open-wc
       - run:
-        command: |
+        command: >
             mkdir asd
             cd asd
             ls -la
